@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+</head>
+<body>
+<h1>Lista de Clientes Cadastrados</h1><br>
+<a href="{%url 'url_principal' %}">Início</a>
+<a href="{% url 'url_cadastrarCliente' %}">Cadastrar Clientes</a><br><br><br>
+
+    {% for i in dados %}
+        <b>     Nome:</b>{{i.nome}}<br>
+        <b>     E-mail:</b>{{i.email}}<br>
+        <b>     Endereço:</b>{{i.endereco}}<br><br>
+    {% endfor %}
+
+</body>
+</html>
